@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mui/mui-toolpad/v0.1.42/docs/schemas/v1/definitions.json#properties/Page
+
+apiVersion: v1
+kind: page
+spec:
+  title: redirectNotice
+  display: standalone
+  content:
+    - component: Text
+      name: text
+      props:
+        value: You will be redirected to **kuyomi.co**, are you sure you want to go?
+        mode: markdown
+      layout:
+        horizontalAlign: center
+    - component: Text
+      name: text1
+      props:
+        mode: link
+        value: GO TO KUYOMI
+        href: https://www.kuyomi.co/?from-domain_lookup?id=982736453245324567323277099887
+      layout:
+        horizontalAlign: center
+    - component: Button
+      name: button
+      layout:
+        horizontalAlign: center
+      props:
+        variant: text
+        content: No, Go Back Home
+        onClick:
+          $$navigationAction:
+            page: Report
+            parameters: {}

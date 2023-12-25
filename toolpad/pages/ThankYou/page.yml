@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mui/mui-toolpad/v0.1.42/docs/schemas/v1/definitions.json#properties/Page
+
+apiVersion: v1
+kind: page
+spec:
+  title: ThankYou
+  display: shell
+  content:
+    - component: Text
+      name: text
+      props:
+        value: Thanks for helping keep Kuyomi safe!
+        variant: h6
+      layout:
+        horizontalAlign: center
+    - component: Button
+      name: button
+      layout:
+        horizontalAlign: center
+      props:
+        content: Home
+        variant: contained
+        fullWidth: false
+        onClick:
+          $$navigationAction:
+            page: Report
+            parameters: {}

@@ -1,0 +1,124 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mui/mui-toolpad/v0.1.42/docs/schemas/v1/definitions.json#properties/Page
+
+apiVersion: v1
+kind: page
+spec:
+  alias:
+    - tdm1S-q
+  title: Default page
+  content:
+    - component: Paper
+      name: paper
+      props:
+        elevation: 5
+      children:
+        - component: PageRow
+          name: pageRow
+          props:
+            justifyContent: start
+          children:
+            - component: Image
+              name: image
+              layout:
+                columnSize: 1.6852836879432624
+              props:
+                src: http://ecsv4-content-assets.kuyomistatic.com/wp-content/uploads/2023/12/KUYOMI.svg
+                width: 100
+                height: 50
+                alt: kuyomiLogo
+            - component: Button
+              name: button
+              layout:
+                columnSize: 0.3147163120567376
+                horizontalAlign: end
+                verticalAlign: center
+              props:
+                content: Back To Kuyomi
+                onClick:
+                  $$navigationAction:
+                    page: redirectNotice
+                    parameters: {}
+    - component: Paper
+      name: paper1
+      children:
+        - component: Text
+          name: text
+          props:
+            value: KUYOMI DOMAIN LOOKUP
+            variant: h3
+          layout:
+            columnSize: 1.8572695035460993
+            horizontalAlign: center
+            verticalAlign: center
+        - component: Text
+          name: text1
+          layout:
+            horizontalAlign: center
+            verticalAlign: center
+          props:
+            value:
+              You can search for official Kuyomi domains here. If you come across a
+              domain saying that it's Kuyomi and it isn't listed here, it most
+              likely isn't an official website.
+        - component: PageRow
+          name: pageRow2
+          props:
+            justifyContent: start
+          children:
+            - component: Autocomplete
+              name: autocomplete
+              props:
+                loading: false
+                fullWidth: true
+                isRequired: false
+                isInvalid: false
+                label: Search for a domain…
+                options:
+                  - kuyomi.co
+                  - kuyomilabs.com
+                  - kuyomistatic.com
+                  - tingleflow.com
+                  - tingleflowstatic.net
+                  - kuyomispaces.com
+                  - kuyomi.space
+                  - kuyomi.site
+                  - kuyomi.dev
+                  - kymi.shop
+                  - studycentral.zone
+                  - pindoo.xyz
+                  - botbox.tech
+                  - coriyule.com
+                  - withkuyomi.com
+                  - kuyomiadnetwork.com
+                  - kuyomiads.net
+                  - kuyomippht.com
+                  - kmiusercontent
+                  - kuyomi.one
+                  - atariembeds.com
+                  - atari-embeds.com
+                  - kmi-infra.net
+                  - kuyomi.id
+                disabled: false
+              layout:
+                columnSize: 1.6852836879432624
+            - component: Button
+              name: button1
+              layout:
+                columnSize: 0.3147163120567376
+                verticalAlign: center
+                horizontalAlign: center
+              props:
+                content: Report a Fake Domain
+                size: small
+                loading: false
+                disabled: false
+                color: secondary
+                onClick:
+                  $$navigationAction:
+                    page: Report
+                    parameters: {}
+        - component: Text
+          name: text2
+          props:
+            value: Some domains may not show a page if you attempt to go to them.
+  display: standalone

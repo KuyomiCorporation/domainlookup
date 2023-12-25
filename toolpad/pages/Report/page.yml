@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mui/mui-toolpad/v0.1.42/docs/schemas/v1/definitions.json#properties/Page
+
+apiVersion: v1
+kind: page
+spec:
+  title: Report
+  display: standalone
+  content:
+    - component: Form
+      name: form
+      props:
+        formControlsFullWidth: true
+        hasResetButton: true
+      children:
+        - component: TextField
+          name: textField
+          props:
+            fullWidth: true
+            variant: outlined
+            label: Domain URL
+            isRequired: true
+        - component: Text
+          name: text2
+          props:
+            value: ""
+            loading: false
+        - component: Checkbox
+          name: checkbox
+          props:
+            mode: checkBox
+            color: success
+            labelPlacement: end
+            label: Is this domain on Kuyomi's Official Domain list?
+            fullWidth: false
+            isRequired: true
+        - component: Text
+          name: text
+          props:
+            value: ""
+            loading: false
+        - component: DatePicker
+          name: datePicker
+          props:
+            fullWidth: true
+            label: What date did you find this domain?
+            isRequired: true
+        - component: Text
+          name: text1
+          props:
+            value: ""
+            loading: false
+        - component: FilePicker
+          name: filePicker
+          props:
+            label: If possible, attach a screenshot of the page
+            name: ""
+    - component: Button
+      name: button
+      layout:
+        horizontalAlign: center
+      props:
+        content: Home
+        fullWidth: true
+        size: medium
+        variant: outlined
+        onClick:
+          $$navigationAction:
+            page: Report
+            parameters: {}
