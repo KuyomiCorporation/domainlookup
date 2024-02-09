@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mui/mui-toolpad/v0.1.49/docs/schemas/v1/definitions.json#properties/Page
+
+apiVersion: v1
+kind: page
+spec:
+  title: Report
+  display: shell
+  authorization:
+    allowAll: true
+  content:
+    - component: Form
+      name: form
+      props:
+        formControlsFullWidth: false
+        hasResetButton: true
+        submitButtonText: Submit Report
+        formControlsAlign: center
+      children:
+        - component: TextField
+          name: textField
+          props:
+            fullWidth: true
+            isRequired: true
+            label: Domain *
+            name: ""
+            placeholder: example.com
+        - component: Select
+          name: select
+          props:
+            fullWidth: true
+            options:
+              - Pishing/Scamming
+              - Malware
+              - Copyright Violation
+              - Cybersquatting
+              - Typosquatting
+              - Unsolicited Communication
+              - Something Else
+            label: This website is.... *
+            isRequired: true
+        - component: FilePicker
+          name: filePicker
+          props:
+            label: Provide any images that may help (optional)

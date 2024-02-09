@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mui/mui-toolpad/v0.1.49/docs/schemas/v1/definitions.json#properties/Page
+
+apiVersion: v1
+kind: page
+spec:
+  alias:
+    - Pi18Jk4
+  title: Default page
+  content:
+    - component: Paper
+      name: paper
+      children:
+        - component: PageRow
+          name: pageRow
+          props:
+            justifyContent: start
+          children:
+            - component: Image
+              name: image
+              layout:
+                columnSize: 2.0290205226008715
+              props:
+                src: http://ecsv4-content-assets.kuyomistatic.com/wp-content/uploads/2023/12/KUYOMI-white.svg
+                height: 30
+                width: 100
+            - component: Button
+              name: button2
+              layout:
+                columnSize: 0.4955343539830035
+                horizontalAlign: end
+              props:
+                content: REPORT FAKE DOMAIN
+                color: secondary
+                variant: outlined
+            - component: Button
+              name: button1
+              layout:
+                columnSize: 0.4754451234161249
+                horizontalAlign: start
+              props:
+                content: Domain Lookup
+    - component: Text
+      name: text
+      layout:
+        horizontalAlign: center
+      props:
+        value:
+          Not sure whether a site claiming to be apart of the Kuyomi Corporation is
+          legit? Use this tool to find all domains we own.
+        variant: h6
+    - component: Button
+      name: button
+      layout:
+        horizontalAlign: center
+      props:
+        content: Report Fake Domain
+        size: medium
+        color: primary
+    - component: PageRow
+      name: pageRow1
+      props:
+        justifyContent: start
+      children:
+        - component: Metric
+          name: metric
+          layout:
+            columnSize: 0.3243006993006993
+          props:
+            label: DOMAINS
+            value: 19
+            fullWidth: true
+        - component: Autocomplete
+          name: autocomplete
+          layout:
+            columnSize: 1.6756993006993006
+          props:
+            fullWidth: true
+            loading: false
+            disabled: false
+            options:
+              - kuyomi.co
+              - kuyomilabs.com
+              - kuyomi.dev
+              - kymi.shop
+              - kuyomi.space
+              - kuyomispaces.com
+              - kuyomigames.com
+              - kuyomi.site
+              - coriyule.com
+              - kmi.one
+              - kuyomistatic.com
+              - botbox.tech
+              - withkuyomi.com
+              - shortsy.cc
+              - urbyes.com
+              - studycentral.zone
+              - pindoo.xyz
+              - tingleflow.com
+              - tingleflowstatic.net
