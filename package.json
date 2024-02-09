@@ -12,6 +12,6 @@
 }
 {
   "scripts": {
-    "build": "[my-framework] build --output public"
+    "build": "react build --output public"
   }
 }
