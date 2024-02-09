@@ -10,3 +10,8 @@
     "@mui/toolpad": "^0.1.49"
   }
 }
+{
+  "scripts": {
+    "build": "[my-framework] build --output public"
+  }
+}
